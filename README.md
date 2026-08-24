@@ -9,8 +9,7 @@ This repository contains notes, techniques, commands, and solutions from various
 - VulnHub
 - TryHackMe
 - PicoCTF
-- OverTheWire
-- Hack The Box
+- HACK KAP
 
 ## Topics
 
