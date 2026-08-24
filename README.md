@@ -10,6 +10,7 @@ This repository contains notes, techniques, commands, and solutions from various
 - TryHackMe
 - PicoCTF
 - HACK KAP
+- Hack the Box
 
 ## Topics
 
