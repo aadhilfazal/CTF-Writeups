@@ -1,6 +1,4 @@
 | Step No. | Command | Explanation | Output of the Command | Takeaway |
-|---|---|---|---|---|
-| **1** | `nmap -sV <IP>` | Scan the target to identify open ports and services. | **[Screenshot of Nmap output]** | Ports **22** and **80** are open, so SSH and HTTP should be investigated. |
-| **2** | `curl http://<IP>` | Retrieve the web server's response. | **[Screenshot of terminal output]** | The web server is accessible and returns a webpage. |
-| **3** | `gobuster dir ...` | Enumerate directories on the web server. | **[Screenshot of Gobuster output]** | `/admin` was discovered and should be investigated. |
-| **4** | **Browser** | Investigate the discovered `/admin` endpoint. | **[Screenshot of webpage]** | The page contains a login form. |
+|---:|---|---|---|---|
+| **1** | `ifconfig` | Display the machine’s network interfaces and identify the assigned IP address and subnet mask. The IP address and subnet mask can then be used to determine the network ID. | ![ifconfig output](screenshots/ifconfig.png)
+ | The host is on the `192.168.255.0/24` network. The assigned IP address is `192.168.255.128`. |
