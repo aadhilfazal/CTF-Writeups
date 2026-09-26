@@ -1,4 +1,4 @@
->🔴 (Failed Attempt) — Indicates an approach that did not produce a useful result and was not pursued further.
+<mark>🔴 (Failed Attempt) — Indicates an approach that did not produce a useful result and was not pursued further.</mark>
 <br>
 | Step No. | Command | Explanation | Output of the Command | Takeaway |
 |---:|---|---|---|---|
