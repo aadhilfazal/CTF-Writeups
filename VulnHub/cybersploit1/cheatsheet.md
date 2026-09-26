@@ -1,3 +1,4 @@
+<mark>🔴 Failed Attempt — Indicates an approach that did not produce a useful result and was not pursued further.</mark>
 | Step No. | Command | Explanation | Output of the Command | Takeaway |
 |---:|---|---|---|---|
 | **1** | `ifconfig` | It display the machine’s network interfaces and identify the assigned IP address and subnet mask. The IP address and subnet mask can then be used to determine the network ID. | ![ifconfig output](screenshots/ifconfig.png) | The host is on the `192.168.255.0/24` network. The assigned IP address is `192.168.255.128`. |
@@ -9,3 +10,4 @@
 | **7** | `-` | Inspecting the website’s source code to identify any useful information. | [Source code of the webpage](screenshots/source.png) | The source code contains a username `itsskv` in a comment, which may be useful for identifying a potential account or for further authorized testing. |
 | **8** | `-` | We will download the GIF from the website and analyze its metadata to determine whether it contains any useful information. | [metadata of hacker.gif](screenshots/exif.png) | The GIF does not contain any useful metadata, so I will not pursue this approach further. |
 | **9** | `dirb http://192.168.255.132` |  It scans the web server for hidden or unlisted directories and files that may provide additional information about the website. | [subdirectry analisis output](screenshots/dirb.png) | The scan found a `robots.txt` file, which may contain useful information about directories that should not be indexed. The next step is to inspect the file and review any paths it references. |
+| **10** | `-` | 
