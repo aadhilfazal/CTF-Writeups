@@ -1,4 +1,4 @@
-><mark>🟢 (Successful Flag Retrieval) — Indicates that the flag was successfully retrieved.</mark>
+><mark>🟢 (Successful Flag Retrieval) — Indicates that the flag was successfully retrieved.</mark><br>
 ><mark>🔴 (Failed Attempt) — Indicates an approach that did not produce a useful result and was not pursued further.<mark>
 
 <br>
