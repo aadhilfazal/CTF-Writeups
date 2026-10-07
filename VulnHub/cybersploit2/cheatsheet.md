@@ -1,6 +1,14 @@
+><mark>🟢 (Successful Flag Retrieval) — Indicates that the flag was successfully retrieved.</mark><br>
+><mark>🔴 (Failed Attempt) — Indicates an approach that did not produce a useful result and was not pursued further.<mark>
+
+<br>
+<br>
+
 | Step No. | Command | Explanation | Output of the Command | Takeaway |
-|---|---|---|---|---|
-| **1** | `nmap -sV <IP>` | Scan the target to identify open ports and services. | **[Screenshot of Nmap output]** | Ports **22** and **80** are open, so SSH and HTTP should be investigated. |
-| **2** | `curl http://<IP>` | Retrieve the web server's response. | **[Screenshot of terminal output]** | The web server is accessible and returns a webpage. |
-| **3** | `gobuster dir ...` | Enumerate directories on the web server. | **[Screenshot of Gobuster output]** | `/admin` was discovered and should be investigated. |
-| **4** | **Browser** | Investigate the discovered `/admin` endpoint. | **[Screenshot of webpage]** | The page contains a login form. |
+|---:|---|---|---|---|
+| **1** | `ifconfig` | It display the machine’s network interfaces and identify the assigned IP address and subnet mask. The IP address and subnet mask can then be used to determine the network ID. | ![ifconfig output](screenshots/ifconfig.png) | The host is on the `192.168.255.0/24` network. The assigned IP address is `192.168.255.128`. |
+| **2** | `sudo netdiscover -r 192.168.255.0/24` |  It scans the 192.168.255.0/24 network and discover active devices on the local network. It identifies hosts by sending ARP requests and can display information such as their IP addresses, MAC addresses, and device/vendor details. | ![netdiscover output](screenshots/netdiscover.png) | The output shows the IP address, MAC address, and vendor information for each discovered device. In this lab environment, `192.168.255.1` is the adapter IP address, `192.168.255.2` is the gateway, and `192.168.255.254` is the DHCP server based on the lab configuration. The host at `192.168.255.131` is identified as the target/victim machine because it has a different MAC address from the other identified network devices, indicating that it is a separate host on the network. |
+| **3** | `nmap 192.168.255.140 -sV -p-` |  It scans all TCP ports on the specified machine and identifies open ports along with the services and their versions running on them. | ![nmap output](screenshots/nmap.png) | It identifies two open ports on the victim machine: port 22, which is running SSH, and port 80, which is running HTTP. |
+| **4** | `searchsploit OpenSSH 5.9p1` | It searches the Exploit Database for known vulnerabilities and exploits related to the OpenSSH 5.9p1 version. | ![searchsploit output for ssh](screenshots/spltssh.png) | 🔴 Since no relevant exploit or exact version match was found, this approach was not pursued further. |
+| **5** | `searchsploit Apache httpd 2.2.22` | It searches the Exploit Database for known vulnerabilities or exploits affecting Apache HTTP Server 2.2.22. | ![searchsploit output for httpd](screenshots/splhttp.png) | 🔴 Since no relevant exploit or exact version match was found, this approach was not pursued further. |
+| **6** | 
